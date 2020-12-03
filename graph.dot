@@ -1,0 +1,46 @@
+digraph LIST{
+	rankdir = TB;
+0 [shape=record,style = "filled", fillcolor = "#73e364", label=" value = 0 | { <prev> prev = 0 | <current> current = 0 | <next> next = 0 } "];
+1 [shape=record,style = "filled", fillcolor = "#c478ff", label=" value = 2 | { <prev> prev = 0 | <current> current = 1 | <next> next = 2 } "];
+2 [shape=record,style = "filled", fillcolor = "#ed8677", label=" value = 4 | { <prev> prev = 1 | <current> current = 2 | <next> next = 3 } "];
+3 [shape=record,style = "filled", fillcolor = "#ed8677", label=" value = 153 | { <prev> prev = 2 | <current> current = 3 | <next> next = 4 } "];
+4 [shape=record,style = "filled", fillcolor = "#ed8677", label=" value = 1 | { <prev> prev = 3 | <current> current = 4 | <next> next = 5 } "];
+5 [shape=record,style = "filled", fillcolor = "#ed8677", label=" value = 34 | { <prev> prev = 4 | <current> current = 5 | <next> next = 6 } "];
+6 [shape=record,style = "filled", fillcolor = "#ed8677", label=" value = 153 | { <prev> prev = 5 | <current> current = 6 | <next> next = 7 } "];
+7 [shape=record,style = "filled", fillcolor = "#ffdb78", label=" value = 100 | { <prev> prev = 6 | <current> current = 7 | <next> next = 0 } "];
+8 [shape=record,style = "filled", fillcolor = "#4dadf7", label=" value = nan | { <prev> prev = 0 | <current> current = 8 | <next> next = 9 } "];
+9 [shape=record,style = "filled", fillcolor = "#4dadf7", label=" value = nan | { <prev> prev = 8 | <current> current = 9 | <next> next = 0 } "];
+
+edge[color = "white", weight = 0, dir = "both"];
+{rank = "same"
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0 -> 0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9;
+}
+edge[color = "red", weight = 0, dir = "both"];
+ 7 -> 0;edge[color = "red", weight = 10000, dir = "both"];
+	1 -> 0;
+edge[color = "red", weight = 10000, dir = "both"];
+	2 -> 1;
+edge[color = "red", weight = 10000, dir = "both"];
+	3 -> 2;
+edge[color = "red", weight = 10000, dir = "both"];
+	4 -> 3;
+edge[color = "red", weight = 10000, dir = "both"];
+	5 -> 4;
+edge[color = "red", weight = 10000, dir = "both"];
+	6 -> 5;
+edge[color = "red", weight = 10000, dir = "both"];
+	7 -> 6;
+edge[color = "red", weight = 10000, dir = "both"];
+	8 -> 0;
+edge[color = "red", weight = 10000, dir = "both"];
+	9 -> 8;
+}

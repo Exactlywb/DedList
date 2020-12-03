@@ -1,0 +1,46 @@
+DEF_ERR (NOERR, {}, {})
+
+DEF_ERR (ZEROSIZE, {
+
+    if (mainList->size == 0) {
+
+        printf ("The size of your list is 0\n");
+        return ZEROSIZE;
+
+    }
+
+}, {})
+
+DEF_ERR (BADPOSITION, {}, {})
+
+DEF_ERR (NO_ELEM, {}, {})
+
+DEF_ERR (SEGFAULT, {}, {
+
+    printf ("Segmantation fault : you're trying to call the empty cell\n");
+
+})
+
+DEF_ERR (MEMERR, {}, {})
+
+DEF_ERR (NOVALUE, {}, {
+
+    printf ("There is no value at this position\n");
+
+})
+
+DEF_ERR (NULLPTR, {
+
+    if (!mainList){
+        printf ("Pointer on your list is nullptr\n");
+        return NULLPTR;
+    }
+
+}, {
+
+    if (!mainList)
+        printf ("Pointer on your list is nullptr\n");
+
+})
+
+DEF_ERR (ZEROINDEX, {}, {})
